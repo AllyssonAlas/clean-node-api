@@ -4,7 +4,18 @@
   "description": "A Node API created using TDD and Clean Architeture.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,6 +29,9 @@
   },
   "homepage": "https://github.com/AllyssonAlas/clean-node-api#readme",
   "devDependencies": {
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "lint-staged": "10.2.6",
     "standard": "14.3.4"
   }
 }
