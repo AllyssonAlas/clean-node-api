@@ -1,0 +1,20 @@
+{
+  "name": "clean-node-api",
+  "version": "1.0.0",
+  "description": "A Node API created using TDD and Clean Architeture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllyssonAlas/clean-node-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllyssonAlas/clean-node-api/issues"
+  },
+  "homepage": "https://github.com/AllyssonAlas/clean-node-api#readme"
+}
