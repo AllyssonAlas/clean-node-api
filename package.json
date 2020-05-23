@@ -4,7 +4,8 @@
   "description": "A Node API created using TDD and Clean Architeture.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test:staged": "jest"
   },
   "standard": {
     "env": ["jest"]
