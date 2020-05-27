@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch --silent --colors --stackTrace",
     "test:staged": "jest --passWithNoTests --findRelatedTests --silent --stackTrace",
-    "test:ci": "jest --coverage"
+    "test:ci": "jest --coverage --stackTrace --silent"
   },
   "standard": {
     "env": ["jest"]
