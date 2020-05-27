@@ -4,8 +4,8 @@
   "description": "A Node API created using TDD and Clean Architeture.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:staged": "jest --passWithNoTests"
+    "test": "jest --watch --silent --colors --stackTrace",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --stackTrace"
   },
   "standard": {
     "env": ["jest"]
