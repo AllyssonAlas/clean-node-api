@@ -6,16 +6,19 @@ const UpdateAccessTokenRepository = require('../../infra/repositories/update-acc
 const Encrypter = require('../../utils/helpers/encrypter')
 const tokenGenerator = require('../../utils/helpers/token-generator')
 
-const encrypter = new Encrypter()
-const updateAccessTokenRepository = new UpdateAccessTokenRepository()
-const loadUserByEmailRepository = new LoadUserByEmailRepository()
-const emailValidator = new EmailValidator()
-const authUseCase = new AuthUseCase({
-  loadUserByEmailRepository,
-  updateAccessTokenRepository,
-  encrypter,
-  tokenGenerator
-})
-const loginRouter = new LoginRouter({ authUseCase, emailValidator })
+module.exports = class LoginRouterComposer {
+  static compose () {
+    const encrypter = new Encrypter()
+    const updateAccessTokenRepository = new UpdateAccessTokenRepository()
+    const loadUserByEmailRepository = new LoadUserByEmailRepository()
+    const emailValidator = new EmailValidator()
+    const authUseCase = new AuthUseCase({
+      loadUserByEmailRepository,
+      updateAccessTokenRepository,
+      encrypter,
+      tokenGenerator
+    })
 
-module.exports = loginRouter
+    return new LoginRouter({ authUseCase, emailValidator })
+  }
+}
