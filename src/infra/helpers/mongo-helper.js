@@ -2,7 +2,6 @@ const { MongoClient } = require('mongodb')
 
 module.exports = {
   async connect (uri, dbName) {
-    console.log(uri)
     this.uri = uri
     this.dbName = dbName
 
